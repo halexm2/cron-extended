@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+/**
+ * @category    Halex
+ * @package     Halex\CronExtended
+ * @author      Aleksejs Prjahins <aleksejs.prjahins@gmail.com>
+ * @license     http://opensource.org/licenses/OSL-3.0 The Open Software License 3.0 (OSL-3.0)
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+    <menu>
+        <add id="Halex_CronExtended::extension" title="CRON Extended" module="Halex_CronExtended" sortOrder="200"
+             parent="Magento_Backend::system" resource="Halex_CronExtended::extension"/>
+        <add id="Halex_CronExtended::schedule" title="Schedule" module="Halex_CronExtended" sortOrder="10"
+             parent="Halex_CronExtended::extension" resource="Halex_CronExtended::schedule"
+             action="cron_extended/schedule/index"/>
+        <add id="Halex_CronExtended::jobs" title="Jobs" module="Halex_CronExtended" sortOrder="20"
+             parent="Halex_CronExtended::extension" resource="Halex_CronExtended::jobs"
+             action="cron_extended/jobs/index"/>
+    </menu>
+</config>

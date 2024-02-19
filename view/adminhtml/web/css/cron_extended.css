@@ -1,0 +1,31 @@
+.cron-extended-status {
+    padding: 8px;
+    background: gray;
+    border-radius: 4px;
+    text-align: center;
+    font-weight: bold;
+    min-width: 100px;
+    max-width: 120px;
+    margin: 0 auto;
+    color: #FFF;
+
+    &.success {
+        background: #67E030;
+        color: #2A6002;
+    }
+
+    &.error {
+        background: #E05C3C;
+        color: #8B0000;
+    }
+
+    &.running {
+        background: #FFD700;
+        color: #000;
+    }
+
+    &.missed {
+        background: #87CEFA;
+        color: #4682B4;
+    }
+}

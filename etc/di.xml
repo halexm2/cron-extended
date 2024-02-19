@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+/**
+ * @category    Halex
+ * @package     Halex\CronExtended
+ * @author      Aleksejs Prjahins <aleksejs.prjahins@gmail.com>
+ * @license     http://opensource.org/licenses/OSL-3.0 The Open Software License 3.0 (OSL-3.0)
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <!-- Magento CLI -->
+    <type name="Magento\Framework\Console\CommandListInterface">
+        <arguments>
+            <argument name="commands" xsi:type="array">
+                <item name="cronExtendedList" xsi:type="object">
+                    Halex\CronExtended\Console\Command\CronListCommand
+                </item>
+                <item name="cronExtendedRun" xsi:type="object">
+                    Halex\CronExtended\Console\Command\CronRunCommand
+                </item>
+            </argument>
+        </arguments>
+    </type>
+
+    <!-- Magento BE -->
+    <virtualType name="Halex\ExtendedCron\Model\ResourceModel\Schedule\Grid\Collection"
+                 type="Magento\Framework\View\Element\UiComponent\DataProvider\SearchResult">
+        <arguments>
+            <argument name="mainTable" xsi:type="string">cron_schedule</argument>
+            <argument name="resourceModel" xsi:type="string">Magento\Cron\Model\ResourceModel\Schedule
+            </argument>
+        </arguments>
+    </virtualType>
+    <type name="Magento\Framework\View\Element\UiComponent\DataProvider\CollectionFactory">
+        <arguments>
+            <argument name="collections" xsi:type="array">
+                <item name="cron_extended_schedule_listing_data_source" xsi:type="string">
+                    Halex\ExtendedCron\Model\ResourceModel\Schedule\Grid\Collection
+                </item>
+            </argument>
+        </arguments>
+    </type>
+</config>

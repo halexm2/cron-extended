@@ -1,0 +1,19 @@
+{
+    "name": "halexm2/cron-extended",
+    "description": "Magento 2 Cron Extended Extension",
+    "type": "magento2-module",
+    "license": "OSL-3.0",
+    "authors": [
+        {
+            "name": "Aleksejs Prjahins",
+            "email": "aleksejs.prjahins@gmail.com"
+        }
+    ],
+    "require": {},
+    "autoload": {
+        "files": [ "registration.php" ],
+        "psr-4": {
+            "Halex\\CronExtended\\": ""
+        }
+    }
+}
