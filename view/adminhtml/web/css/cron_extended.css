@@ -29,3 +29,7 @@
         color: #4682B4;
     }
 }
+
+.cron-extended-message {
+    white-space: normal;
+}

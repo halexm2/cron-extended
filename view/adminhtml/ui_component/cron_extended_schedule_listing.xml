@@ -46,18 +46,6 @@
     <listingToolbar name="listing_top">
         <bookmark name="bookmarks"/>
         <columnsControls name="columns_controls"/>
-        <massaction name="listing_massaction">
-            <argument name="data" xsi:type="array">
-                <item name="data" xsi:type="array">
-                    <item name="selectProvider" xsi:type="string">
-                        cron_extended_schedule_listing.cron_extended_schedule_listing.dev_grid_category_columns.ids
-                    </item>
-                    <item name="displayArea" xsi:type="string">bottom</item>
-                    <item name="component" xsi:type="string">Magento_Ui/js/grid/tree-massactions</item>
-                    <item name="indexField" xsi:type="string">schedule_id</item>
-                </item>
-            </argument>
-        </massaction>
         <filters name="listing_filters">
             <argument name="data" xsi:type="array">
                 <item name="config" xsi:type="array">

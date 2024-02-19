@@ -34,7 +34,7 @@ class ScheduleActions extends AbstractAction
                 'label' => __('Show Messages'),
                 'confirm' => [
                     'title' => __('Cron Execution Messages'),
-                    'message' => sprintf('<pre>%s</pre>', $item['messages']),
+                    'message' => sprintf('<pre class="cron-extended-message">%s</pre>', $item['messages']),
                 ]
             ],
         ];
